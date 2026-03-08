@@ -3,40 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Home</title>
 </head>
 <body>
-   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+    <nav class="navbar navbar-expand-lg" style="background-color:#DB7093;">
+    <a class="navbar-brand" href="index.html">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>    
+   
 
-    <header>
-    <h1>Angel M. Mayila</h1>
-    <p>Emerging Data Scientist</p>
-    <img src="your-profile-picture.jpg" alt="Angel Mayila" width="200">
-</header>
 
-<main>
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hi there! I'm Angel, a 19 year old Motswana currenly studying Bsc. Business Intelligence and Data Analytics.
-            Though I'm cureently in first year, this is my portfolio, that I have made, to capture milestones in my journey to becominga data scienist. And I'd love to share it with you!
-        </p>
-    </section>
+<main style="padding-bottom:80px;">
+
+    <body>
     
-    <section>
-        <h2>Quick Links</h2>
-        <a href="projects.html">View My Projects</a>
-        <a href="contact.html">Contact Me</a>
-    </section>
+    <header class="text-center my-5">
+        <h1 class="fancy-heading">Angel M. Mayila</h1>
+        <p class="lead">Emerging Data Scientist</p>
+    </header>
+
+    
+    <main class="container pb-5">
+       
+        <section class="mb-5">
+            <div class="clearfix">
+                <!-- Profile image – floats left on all screens, with margin -->
+                <img src="pfp.jpg" alt="Angel Mayila" class="float-start me-3 mb-2 img-fluid" width="200">
+                
+                
+                <p>
+                    Hi there! I'm Angel, a 19 year old Motswana currently studying Bsc. Business Intelligence and Data Analytics. Though I'm currently in first year, this is my portfolio, that I have made, to capture milestones in my journey to becoming a data scientist. And I'd love to share it with you!
+                </p>
+                <p>
+                    
+                </p>
+                <p>
+                    This portfolio will grow with me from first-year projects to real-world analytics. Thanks for stopping by!
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Links section -->
+        <section>
+            <h2 class="mb-3" style="color: #DB7093;">Quick Links</h2>
+            <div class="d-flex gap-3">
+                <a href="projects.html" class="btn btn-outline-primary">View My Projects</a>
+                <a href="contact.html" class="btn btn-outline-secondary">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript (optional but recommended for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </main>
 
-<footer>
+<footer style="background-color:#333; color:white; text-align:center; padding:10px; position:fixed bottom:0; width:100%;">
     <p>&copy; 2026 Angel Mayila</p>
 </footer>
+    
 
 
 </nav>

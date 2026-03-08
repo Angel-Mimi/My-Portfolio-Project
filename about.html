@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>About Me</title>
 </head>
 <body>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
+    <nav class="navbar navbar-expand-lg" style="background-color:#DB7093;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="about.html">About me</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="contact.html">Contact me</a>
+      </div>
+    </div>
+  </div>
+</nav>    
+    
 <header>
     <h1>About Me</h1>
 </header>
 
-<main>
-    <img src="your-profile-picture.jpg" alt="Your Name" width="200">
+<main style="padding-bottom:80px;">
     
-    <h2>Hi, I'm Angel!</h2>
-    
-    <p>I'm currently a 19 year old, living in Gaborone, Botswana; A 1st year BSBS student</p>
-    
-    <p>Write another paragraph about your goals. What do you want to achieve as a developer?</p>
-    
-    <h3>My Skills</h3>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Bootstrap</li>
-        <li>Git & GitHub</li>
-        <li>Excel</li>
-        <li>python</li>
-    </ul>
-    
-    <h3>When I'm Not Coding</h3>
-    <p>When I'm not working on widening my skillset, I love reading novels ( especially mystrery/ crime or thrillers), baking and spending quality time wih loved ones./p>
-</main>
+   <main class="container pb-5">
+        <!-- ========== ABOUT SECTION ========== -->
+        <section class="mb-5">   <!-- mb-5 gives lots of space after this section -->
+            <div class="clearfix">
+                <img src="pfp.jpg" alt="Angel Mayila" class="float-start me-3 mb-3 img-fluid" width="200">
+                
+                <!-- Heading with line separator + optional fancy font -->
+                <h2 class="section-heading fancy-heading">Hi, I'm Angel!</h2>
+                
+                <p>
+                    I'm currently a 19 year old, living in Gaborone, Botswana; a 1st year BSc Business Intelligence and Data Analytics student. As a child, I've always found interest in computers, even though tech has always been a male dominated field. But always seeing how computers work, seeing those cool programmers on movies and series just intrigued me as a kid. So once I became a teenager, I became determined to move past this stigma, and follow what I've always had a passion in.
+                </p>
+                <p>
+                    Fast forward to today, I've worked hard to be in this position to be able to get a sponsorship to study this course. And I'm so excited to be on this journey. I can't wait to see where it takes me!
+                </p>
+                <p>
+                    In the near future, I'd like to sharpen my data analysis skills by mastering Tableau and Python, as well as learn other programming languages such as Java.
+                </p>
+            </div>
+        </section>
 
-<footer>
+        <!-- ========== SKILLS SECTION ========== -->
+        <section class="mb-5">
+            <h3 class="section-heading">My Skills</h3>
+            <ul class="list-unstyled row row-cols-2 g-3">  <!-- optional Bootstrap grid to display skills in two columns -->
+                <li> >HTML5</li>
+                <li>>CSS3</li>
+                <li>>Power BI</li>
+                <li>>Git & GitHub</li>
+                <li>>Excel</li>
+                <li>>Entry-level knowledge of Python</li>
+                <li>>Access</li>
+            </ul>
+        </section>
+
+        <!-- ========== HOBBIES SECTION ========== -->
+        <section class="mb-5">
+            <h3 class="section-heading">When I'm Not Coding</h3>
+            <p>When I'm not working on widening my skillset, I love reading novels (especially mystery / crime or thrillers), baking and spending quality time with loved ones.</p>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript (for any interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<footer style="background-color:#333; color:white; text-align:center; padding:10px; position:fixed; bottom:0; width:100%;">
     <p>&copy; 2026 Angel Mayila</p>
 </footer>
+    
 
 
 </body>

@@ -3,57 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS (only once) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Projects</title>
+    <!-- All your styles moved to head (where they belong) -->
+    <style>
+        /* Make the carousel images consistent and nice */
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px; /* adjust as needed */
+            width: 100%;
+        }
+
+        /* Container for the image + hover overlay */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px; /* soft corners */
+        }
+
+        /* The overlay that appears on hover */
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(219, 112, 147, 0.9); /* your pink with transparency */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        /* Show overlay on hover over the card */
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        /* Style the technology list inside overlay */
+        .project-overlay ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        .project-overlay li {
+            display: inline-block;
+            background: white;
+            color: #DB7093;
+            padding: 5px 12px;
+            margin: 5px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Optional: make captions (slide labels) more readable */
+        .carousel-caption {
+            background: rgba(0,0,0,0.5);
+            border-radius: 20px;
+            padding: 15px;
+            color: white !important;
+        }
+        .carousel-caption h5, .carousel-caption p {
+            color: white;
+        }
+        /* Keep the dark captions readable on light images */
+        .carousel-caption a {
+            color: #FFD700; /* gold links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .carousel-caption a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-    
-</nav>
+    <!-- Navbar (unchanged) -->
+    <nav class="navbar navbar-expand-lg" style="background-color:#DB7093;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About me</a>
+                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="contact.html">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<header>
-    <h1>My Projects</h1>
+    <!-- Header (I kept it simple) -->
+    <header class="mt-4">
+        <h1 class="text-center" style="color: #DB7093;">My Projects</h1>
+    </header>
 
-</header>
-<main>
-    <!--Project 1 -->
-        <article>
+    <main style="padding-bottom:80px;">
+        <!-- Your original manual project listings (kept exactly as you had them) -->
+        <!-- Project 1 -->
+        <article class="container mt-5">
             <h2>Project1: Personal Portfolio</h2>
-            <img src="project1-thumbnail.jpg" alt="Portfolio website screenshot" width="300">
-            <p>This is my first portfolio website I'm currently working on! It shows my skills in HTML, CSS, and Github Pages</p>
+            <img src="project 1-thumbnail. jpg.jpg" alt="Portfolio website screenshot" width="300">
+            <p>This is my first portfolio website I made in my first semester of my first year! It shows my skills in HTML, CSS, and Github Pages</p>
             <h3>Technologies Used</h3>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
                 <li>Github Pages</li>
             </ul>
-            <a href="#">Live Demo</a> |<a href="#">https://github.com/Angel-Mimi?tab=repositories</a>
-            </article>
-
-    <!-- Project 2 -->
-    <article>
-        <h2>Project 2:[Your Next Project]</h2>
-        <img src="project2-thumbanail.jpg" alt="Project Screenshot" width="300">
-        <p>Brief description of your second project goes here. Highlight the main features and technologies used.</p>
-        <h3>Technologies Used:</h3>
-        <ul>
-            <li>Technology 1</li>
-            <li>Technology 2</li>
-           </ul>
-           <a href=""#>Live Demo</a> | <a href="#">https://github.com/Angel-Mimi?tab=repositories</a>
-
-
+            <a href="#">Live Demo</a> | <a href="https://github.com/Angel-Mimi?tab=repositories">https://github.com/Angel-Mimi?tab=repositories</a>
         </article>
-</main>
 
-<footer>
-     <p>&copy;2026 Angel Mayila</p>
+        <!-- Project 2 -->
+        <article class="container mt-5">
+            <h2>Power BI Dashboard</h2>
+            <img src="project2-thumbnail.jpg" alt="Project Screenshot" width="300">
+            <p>Here, I had made a dashboard for a business's recent performance using Power BI</p>
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>Power BI</li>
+                <li>Excel</li>
+            </ul>
+        </article>
+
+        <!-- Bootstrap Carousel (added below your manual projects) -->
+        <div class="container my-5">
+            <h2 class="section-heading" style="color: #DB7093; border-bottom: 3px solid #DB7093; padding-bottom: 0.5rem; margin-bottom: 2rem;">My Projects Carousel</h2>
+
+            <div id="projectCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+                </div>
+
+                <!-- Carousel inner (slides) -->
+                <div class="carousel-inner">
+                    <!-- PROJECT 1 SLIDE -->
+                    <div class="carousel-item active">
+                        <div class="project-card">
+                            <!-- Image – make sure the filename matches your actual file -->
+                            <img src="project1-thumbnail.jpg" class="d-block w-100" alt="Portfolio website screenshot">
+                            <!-- Hover overlay with technologies -->
+                            <div class="project-overlay">
+                                <h4>Technologies Used</h4>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>GitHub Pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Caption below the image (visible on medium+ screens) -->
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Project 1: Personal Portfolio</h5>
+                            <p>This is my first portfolio website made in first semester! It shows my skills in HTML, CSS, and GitHub Pages.</p>
+                            <p>
+                                <a href="#" target="_blank">Live Demo</a> | 
+                                <a href="https://github.com/Angel-Mimi?tab=repositories" target="_blank">GitHub Repo</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 SLIDE -->
+                    <div class="carousel-item">
+                        <div class="project-card">
+                            <img src="project2-thumbnail.jpg" class="d-block w-100" alt="Power BI Dashboard screenshot">
+                            <div class="project-overlay">
+                                <h4>Technologies Used</h4>
+                                <ul>
+                                    <li>Power BI</li>
+                                    <li>Excel</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Project 2: Power BI Dashboard</h5>
+                            <p>A dashboard for a business's recent performance using Power BI and Excel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (unchanged) -->
+    <footer style="background-color:#333; color:white; text-align:center; padding:10px; position:fixed; bottom:0; width:100%;">
+        <p>&copy; 2026 Angel Mayila</p>
     </footer>
 
+    <!-- BOOTSTRAP JAVASCRIPT – this is what makes the carousel work! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
-
